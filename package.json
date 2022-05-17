@@ -10,14 +10,25 @@
     "@types/node": "^16.11.32",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
+    "cdbreact": "^1.5.1",
+    "concurrently": "^7.1.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.7",
+    "electron": "^18.2.3",
+    "electron-packager": "^15.5.1",
+    "globalthis": "^1.0.3",
+    "html-react-parser": "^1.4.12",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-native-fs": "^2.20.0",
     "react-scripts": "5.0.1",
+    "typed": "^4.0.1",
+    "typed.js": "2",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"node dev\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.0"
   }
 }

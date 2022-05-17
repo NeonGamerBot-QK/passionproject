@@ -1,0 +1,32 @@
+{
+  "title": "Web Development History",
+  "body": [
+    "The history of web development starts in the year 1993, <a href=\"https://en.wikipedia.org/wiki/Tim_Berners-Lee\"> \n<b> Tim Berners-Lee </b></a> wrote the first version of HTML  and communicated it via <b>Hypertext Transfer Protocol (<abbr title=\"Hypertext Transfer Protocol \">HTTP</abbr>)</b>. \n<a href=\"https://en.wikipedia.org/wiki/Tim_Berners-Lee\"> <b> Tim Berners-Lee </b></a> is a computer scientist and physicist.\nHe was a pretty big deal because he was the inventor of the internet which everybody uses today. HTML was updated many times during the years. HTML v2 was released in <b>1995</b>, V3 and V4 were released in <b>1997</b> . The latest and current version of HTML is HTML5 and it was released in <b>2011</b>. HTML cookies were also an important part of the website as they were used to store light information such as login information visits etc..\nThis was supported in <b>1994</b> in mosaics browser. Cookies are a huge part of site because it is the only storage and is now having alternatives. Cookies contain storage for trackers and IP address which is why no body likes them and if you download them and give them to someone they can use ur cookie login info.\n\n\n<img src=\"https://cdn.devdojo.com/images/january2021/tim-berners-lee.jpg\" width=\"900\"style=\"height: 100%; overflow: auto; border: 1px solid var(--fg-color);\">\n\n\n",
+    "In the first version of HTML it was pretty bland, it was considered an ugly baby 👶.\n But in late <b>1994</b> When <a href=\"\">Håkon Wium Lie </a> published the first draft of  <b>Cascading HTML Style Sheets (<abbr title=\"Cascading HTML Style Sheets\"> CSS </abbr>)  </b>. The first release of <abbr title=\"Cascading HTML Style Sheets\"> CSS </abbr> stirred up commotion on it being to easy, it was arrgued that the power of the full language was required. \nAfter many arguments CSS made into the <strong>World Wide Web Consortium</strong> (<strong>W3C</strong>).  In <b>1997</b> CSS v2 was released, published  and used in most browsers.\nCSS is the style of the document which you can use to alter the document.\nCSS can add width height, margin, padding, size, animation, transitions, colors and much more advanced and customizable properties.\nSCSS is CSS with custom variables and functions to improve CSS. SCSS was made in 2006 on November 28. it was designed by <a href=\"https://en.wikipedia.org/wiki/Hampton_Catlin\" title=\"Hampton Catlin\">Hampton Catlin</a> SASS or SCSS is a new popular css alternative for more imports variables and functions within the file, it can all be compiled into a css file later and some frameworks like react auto-compile when you import it.\n\n<img src=\"https://cdn.devdojo.com/images/january2021/css-creator.jpg\" style=\"height: 100%; overflow: auto; border: 1px solid var(--fg-color);\" />\n\n",
+    "Mocha which is now called JavaScript is the client side scripting language used with HTML & CSS. A Netscape programmer named <i>Brandan Eich</i>.\n\nBrandan Eich made the language in <b>1995</b> to go along with the HTML and CSS. JavaScript was the client side of the code which connected to the server side or just did some simple tasks. Java script later had a sub language of <b> nodejs </b> which is used by some popular frameworks as <a href=\"https://www.electronjs.org/\" target=\"_blank\">Electron</a>, <a href=\"https://reactjs.org/\" target=\"_blank\">React </a> and <a href=\"https://nextjs.org/\" target=\"_blank\">Next.js</a>.  Javascript has compilers as well Such as <a href=\"https://www.typescriptlang.org/\"> Typescript (.ts)</a> and <a href=\"https://coffeescript.org/\">CoffeeScript (.coffee)</a>\nCoffee script is a simpler version of JavaScript which improves most functions and simpler to python. it was a combination of JavaScript java and python.\nTypescript is a combination of java C and JavaScript. Typescript checks everything and helps you improve ur code. Your code is compiled in to a file with the code in it. Typescript is used more commonly then Coffee script because of its strict check. These file languages and compilers can be used in front end development or back side development (NodeJs)!",
+    "React JS is a front end framework made in 2013 4 years after nodeJS was made.\nReact has a special features of components. Components can be used in ways, such as customization organization etc. React is used in over 9,000 site such as Netflix, Uber Airbnb. React can also be used in IOS apps and Android apps. React was created by Jordan Walke while he was working for Facebook wanted something to handle the ads in Facebook and in Instagram. Here is an example of a star war dark side graph relating to components.<br />\n<img src=\"https://miro.medium.com/max/618/1*9HsrOVEBTFYr97QQzOInSw.png\">",
+    "\n\nAll of these three languages go together to make a perfect site such as google or amazon. Server side or back side code is used to handle tokens logins payments and to secure info that cant be in cookies that are for the server.\n\n Amazon and google such as this offer hosting for a monthly cost. "
+  ],
+  "cites": [
+    {
+      "href": "devdojo.com/tnylea/a-brief-history-of-web-development",
+      "published": "27 Jan. 2021, ",
+      "authorName": "DevDojo",
+      "title": "A Brief History of Web Development",
+      "firstname": "Tony",
+      "lastname": "Lea"
+    },
+    {
+      "href": "en.wikipedia.org/wiki/Tim_Berners-Lee",
+      "fullname": "Wikipedia Contributors"
+    },
+    {
+      "href": "mad-simon01.medium.com/history-of-react-js-summary-f956c78ad881",
+      "title": "History of React.js Summary - Madiwa Simon - Medium",
+      "firstname": "Madiwa",
+      "lastname": "Simon",
+      "published": "10 Mar. 2021,"
+    },
+    "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+  ]
+}

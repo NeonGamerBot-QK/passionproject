@@ -1,0 +1,15 @@
+.dark a, 
+.dark a:visited,
+.dark a:hover,
+.dark a:active 
+.dark div a {
+    color: #e4e4f4;
+}
+.dark ul .dropdown-menu {
+    background-color: var(--black);
+    color: #e4e4f4;
+}
+.dark ul .dropdown-menu li:hover, .dark ul .dropdown-menu li:active {
+    background-color: var(--black);
+    color: #e4e4f4;
+}

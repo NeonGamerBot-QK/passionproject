@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin+Condensed");
+
+.center {
+    position: absolute;
+    top: 50%;
+}
+
+.text text {
+    paint-order: stroke;
+    stroke: var(--fg-color);
+    stroke-width: 0.15px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    font-size: 1rem;
+    font-family: "Cabin Condensed", sans-serif;
+}
+/* .text {
+    display: inline-block;
+} */

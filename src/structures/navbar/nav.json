@@ -1,0 +1,24 @@
+{
+    "title": "Passion Project - Web Development History",
+    "paths":
+    [
+        {
+            "name": "Homepage",
+            "url": "/",
+            "disabled": false,
+            "type": "link"
+        },
+        {
+            "name": "Flipgrids",
+            "url": "/flipgrids",
+            "disabled": false,
+            "type": "link"
+        },
+        {
+            "name": "Timeline",
+            "url": "/timeline",
+            "disabled": false,
+            "type": "link"
+        }
+    ]
+}

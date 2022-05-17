@@ -1,3 +1,40 @@
+:root {
+  --black: #1A1A1A; 
+  --white: #fff;
+  --fg-color-secondary: #696969;
+  --fg-color: var(--black);
+  --bg-color: var(--white);
+}
+
+* {
+  transition: background 0.4s linear, color 0.3s linear !important;
+}
+input {
+  color: var(--fg-color); 
+}
+textarea {
+  color: var(--fg-color); 
+}
+.text-area {
+  color: var(--fg-color);
+  background: var(--bg-color); 
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: auto;
+  /* resize: none; */
+  
+}
+
+::-webkit-scrollbar textarea {
+  color: var(--fg-color);
+  background: var(--bg-color); 
+  border: none;
+  height: 1%;
+  width: 100%;
+  padding: auto;
+  resize: none;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +42,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-color);
+  color: var(--fg-color);
+  font-weight: var(--font-weight);
+  /* transition: all 3s linear; */
+
 }
+#root {
+  background: var(--bg-color);
+  color: var(--fg-color);
+}
+body.light {
+  --fg-color: var(--black);
+  --bg-color: var(--white);
+}
+body.dark {
+  --fg-color: var(--white);
+  --bg-color: var(--black);
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* .dark {
+  background: var(--black);
+  color: var(--white);
+} */
+
+ 

@@ -1,0 +1,23 @@
+.search-container {
+    color: var(--fg-color);
+background-color: var(--fg-color-secondary);
+}
+.search-input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid var(--fg-color-secondary);
+    font-size: 16px;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+.search-container div {
+    color: var(--fg-color);
+}
+.search-container div input {
+    color: var(--fg-color);
+}
+.search-container div input[readonly] {
+    color: var(--fg-color);
+}

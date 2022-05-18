@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './timeline.css';
+// const isDev = process.env.NODE_ENV !== 'production'; // not used so we comment
 export default function Timeline() {
     return (
 <>

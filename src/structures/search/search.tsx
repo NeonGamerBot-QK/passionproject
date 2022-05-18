@@ -5,6 +5,7 @@ import bodyConfig from '../main/main.json';
 //@ts-ignore
 import { CDBContainer } from 'cdbreact';
 import parse from 'html-react-parser';
+const isDev = process.env.NODE_ENV !== 'production';
 
 // const getrender = (code: string) => {
 //     return parse(code);
@@ -20,12 +21,12 @@ export default function Search({ query }: any) {
         if(l.includes(query)) return { index, body: l }
         return {};
     });
-    console.log(bodys[0], "TOPS")
+   if(isDev) /* only log with dev mode*/console.log(bodys[0], "TOPS")
 return (
     <div style={{ minHeight: 'calc(100vh + 100px)' }}>
     <p className="search-input">{query}</p>
     {bodys.map((bdy, i) => {
-        // console.log(body)
+        //if(isDev) /* only log with dev mode*/console.log(body)
         if(!bdy.body) return null;
         const body = bdy.body
 const lines = body.split(" ").filter(l => l.includes(query));
@@ -34,9 +35,9 @@ return (<CDBContainer className="search-container">
 {lines.length > 0 ? "Body " + (i+1) + " results:": ""}
 <br />
 {lines.map((line, lineind) => {
-    // console.log(line.replace(
+    //if(isDev) /* only log with dev mode*/console.log(line.replace(
     //     line.split("<img")[1].split(">")[0], ""))
-    console.log(line, "line")
+   if(isDev) /* only log with dev mode*/console.log(line, "line")
 return (
 <>
 <br />  

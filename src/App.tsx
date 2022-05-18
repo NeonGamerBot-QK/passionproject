@@ -5,13 +5,15 @@ import * as constants from './constants';
 import MainApp from './structures/main/main';
 import Search from './structures/search/search';
 import Timeline from './structures/timeline/timeline';
+const isDev = process.env.NODE_ENV !== 'production';
+
 function App() {
   //@ts-ignore
   window.constants = constants 
 React.useEffect(() => {
-  console.debug("App.tsx: useEffect called")
+ if(isDev) /* only log with dev mode*/console.debug("App.tsx: useEffect called")
   const inter = setInterval(() => {
-    console.debug("Inter called")
+   if(isDev) /* only log with dev mode*/console.debug("Inter called")
     let theme = localStorage.getItem("theme") ? atob(localStorage.getItem("theme") ?? "bGlnaHQ=") : "light";
   if(theme === "light") {
     document.body.classList.add("light");
@@ -20,7 +22,7 @@ React.useEffect(() => {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
   } else {
-    console.debug("Bad theme: " + theme)
+   if(isDev) /* only log with dev mode*/console.debug("Bad theme: " + theme)
   }
   }, 150)
 return () => clearInterval(inter);

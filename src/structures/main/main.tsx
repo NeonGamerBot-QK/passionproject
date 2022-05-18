@@ -8,6 +8,7 @@ import parse from 'html-react-parser';
 //@ts-ignore
 import { CDBContainer } from 'cdbreact';
 import { compileLines } from '../../util';
+const isDev = process.env.NODE_ENV !== 'production';
 
 const getLength = () => {
     let length = 0;
@@ -92,7 +93,7 @@ const DevBody = ({ i, b }: any) => {
                             },
                             body: JSON.stringify({ data: config })
                         }).then(data => {
-                            console.log(data);
+                           if(isDev) /* only log with dev mode*/console.log(data);
                         alert("Saved!")
                         })
                     }}>
@@ -109,8 +110,8 @@ Save
                             margin: '10px'
                    }}>
                    {compileLines(value).map((b, index) => {
-    return (<div className="line" style={{marginTop:"-5px", marginBottom: "-10px", display: "inline-block"}} >
-    {/* {index > 0 ? <hr /> : console.log("No Hr")} */}
+    return (<div className="line" key={`${i}-${index}`}style={{marginTop:"-5px", marginBottom: "-10px", display: "inline-block"}} >
+    {/* {index > 0 ? <hr /> */}
     <p key={index} className="lead" id={`body-${i}-line-${index}`} style={{ background: `${window.location.hash === `#body-${i}-line-${index}` ? "yellow" : "var(--bg-color)"}`}}>
     {getrender(b)}
     </p>
@@ -129,10 +130,10 @@ export default function MainApp() {
  let [easter, setEaster] = useState<any>("none");
  const [refresh, setRefresh] = useState<any>(false);
  const isDev = window.location.href.includes("?useprod") && process.env.NODE_ENV !== "production" ? false : process.env.NODE_ENV !== "production";
- console.debug(isDev, "isDev", "process.env.NODE_ENV !== \"production\"");
+if(isDev) /* only log with dev mode*/console.debug(isDev, "isDev", "process.env.NODE_ENV !== \"production\"");
 useEffect(() => {
     if(text && !called) {
-        console.log("MainApp: called", called, text);
+       if(isDev) /* only log with dev mode*/console.log("MainApp: called", called, text);
       new Typed(text, {
             strings: ["502-777-1111"],
             typeSpeed: 100,
@@ -145,12 +146,14 @@ useEffect(() => {
     //@ts-ignore
     setEaster(window.easterEgg ? "inline-block" : "none" )
    })
-}, [setCalled, setEaster, text, called])
- console.log(`${getLength()} lines`);
+}, [setCalled, setEaster, text, called, isDev])
+if(isDev) /* only log with dev mode*/console.log(`${getLength()} lines`);
   return (<>
   {/* @ts-ignore */}
-  <div className="text-box" style={{ display: easter }}><h1><span id="auto-input" ref={(el) => console.log(setText(el), "rel")} onLoad={(e) => {
-      console.log(e, text, "onload")
+  <div className="text-box" style={{ display: easter }}><h1><span id="auto-input" ref={(el) => {
+      if(isDev) /* only log with dev mode*/console.log(setText(el), "rel")
+    }} onLoad={(e) => {
+     if(isDev) /* only log with dev mode*/console.log(e, text, "onload")
 //@ts-ignore
 // let typed = new Typed("#auto-input", {
 //     strings: ["502", "502-777", "502-777-1111"],
@@ -158,7 +161,7 @@ useEffect(() => {
 //     backSpeed: 100,
 //     loop: true,
 //   })
-  console.log(typed);
+ if(isDev) /* only log with dev mode*/console.log(typed);
 //   typed.start();
         }}></span></h1></div>
         <CDBContainer style={{ minHeight: `calc(100vh + ${getLength()}px)` }}>
@@ -185,7 +188,10 @@ useEffect(() => {
             }}>
 {compileLines(body).map((b, index) => {
     return (
-    <p key={index} className="lead line" id={`body-${i}-line-${index}`} style={{ background: `${window.location.hash === `#body-${i}-line-${index}` ? "rgba(187,128,9,0.15)" : "var(--bg-color)"}`}}>
+    <p key={index} className="lead line" id={`body-${i}-line-${index}`} style={{ cursor: "pointer", background: `${window.location.hash === `#body-${i}-line-${index}` ? "rgba(187,128,9,0.15)" : "var(--bg-color)"}`}} onDoubleClick={(e) => {
+        window.location.hash = `#body-${i}-line-${index}`
+        setRefresh(!refresh)
+    }}>
     {getrender(b)}
     </p>
     )
@@ -208,8 +214,8 @@ setRefresh(!refresh)
             <h1>Cites</h1>
             <br />
             {/* <div style={{marginLeft: "14px", textIndent: "-14px"}}>Lea, Tony. “A Brief History of Web Development.” <i>DevDojo</i>, 27 Jan. 2021, <a href="https://devdojo.com/tnylea/a-brief-history-of-web-development"> devdojo.com/tnylea/a-brief-history-of-web-development </a>.</div> */}
-            {config.cites.map((cite:any) => {
-                return (<div style={{marginLeft: "14px", textIndent: "-14px"}}>
+            {config.cites.map((cite:any, index: number) => {
+                return (<div style={{marginLeft: "14px", textIndent: "-14px"}} key={index}>
                     {cite.fullname ? cite.fullname : (`${cite.lastname || "cite.lastname"}, ${cite.firstname || "cite.firstname"}`)}. "{cite.title || "cite.title"}" <i>{cite.authorName || "cite.authorName"}</i> {cite.published || "cite.published"} {" "}
                     <a href={"https://"+cite.href} target="_blank" rel="noopener noreferrer">{cite.href || "cite.href"}</a>
                     <br />

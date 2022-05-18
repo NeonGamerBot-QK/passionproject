@@ -18,15 +18,26 @@
     },
     {
       "href": "en.wikipedia.org/wiki/Tim_Berners-Lee",
-      "fullname": "Wikipedia Contributors"
+      "fullname": "Wikipedia Contributors",
+      "title": "Tim Berners-Lee",
+      "authorName": "Wikipedia",
+      "published": "16 Apr. 2022, "
+
     },
     {
       "href": "mad-simon01.medium.com/history-of-react-js-summary-f956c78ad881",
       "title": "History of React.js Summary - Madiwa Simon - Medium",
       "firstname": "Madiwa",
       "lastname": "Simon",
-      "published": "10 Mar. 2021,"
+      "published": "10 Mar. 2021,",
+      "authorName": "Medium"
     },
-    "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+    {
+      "fullname": "Wikipedia Contributors",
+      "authorName": "Wikipedia",
+      "published" : "17 Apr. 2022,",
+      "title": "Sass (stylesheet language)",
+      "href": "en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+     }
   ]
 }

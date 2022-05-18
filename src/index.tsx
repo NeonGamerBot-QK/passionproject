@@ -11,11 +11,25 @@ import Navbar from './structures/navbar/navbar';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { NO_MUSIC } from './constants';
-
+const isDev = process.env.NODE_ENV !== 'production';
+;(() => {
+console.log(
+  `%c What's up?`,
+  `font-size: 120px;
+  font-family: "Poppins", sans-serif;
+  background-size: 1000% 1000%;
+  animation: gradient 1s ease infinite;
+  `,
+)
+console.log(`%c Thanks for visting this site you can dontate me at https://ko-fi.com/saahil\n Try to find the easter egg in this site🥚\n HINT: its a phone number`, `font-size: 15px;`)
+if(isDev) console.debug("This message will show durring production build. & development build");
+})()
 const background_music = new Audio(backgroundaudio);
+background_music.muted = true;
 background_music.loop = true;
 background_music.volume = 0.5;
 background_music.play();
+background_music.muted = false;
 const easterEgg_music = new Audio(easterEgg);
 let keys = "";
 //@ts-ignore
@@ -54,7 +68,7 @@ easterEgg_music.addEventListener('ended', (e) => {
   window.easterEgg = false;
 })
 } else if(keys === "Enter" || keys === "stop") {
-  console.log(keys, "STOP")
+ if(isDev) /* only log with dev mode*/console.log(keys, "STOP")
   keys = "";
 if(!easterEgg_music.paused) easterEgg_music.pause();
   easterEgg_music.currentTime = 0

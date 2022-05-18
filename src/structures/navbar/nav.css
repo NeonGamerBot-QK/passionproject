@@ -4,7 +4,9 @@ input#un-mute {
 #volume img {
     cursor: pointer;
 }
-  
+  #volume {
+    max-height: 2vh;
+  }
   .unmute img {
     display: none;
   }

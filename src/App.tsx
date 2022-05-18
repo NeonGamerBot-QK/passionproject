@@ -49,6 +49,7 @@ const querys = new URLSearchParams(window.location.search);
 <div id="flipgrids" className="flipgrids" style={{ display: "flex" }}>
 <iframe
     width="600"
+    id="flipgrid-1"
     title="Flipgrid 1"
     height="338"
     frameBorder="0"
@@ -61,6 +62,13 @@ const querys = new URLSearchParams(window.location.search);
     src="https://flipgrid.com/s/4cuFWqDiKXZ8?embed=true"
    /* It allows the iframe to be fullscreened. */
     // allowfullscreen
+    allow="microphone; camera; display-capture"></iframe>
+    <iframe
+    width="600"
+    title="FlipGrid 3"
+    height="338"
+    frameBorder="0"
+    src="https://flipgrid.com/s/bb54nyeAb_ER?embed=true"
     allow="microphone; camera; display-capture"></iframe>
 </div>
 

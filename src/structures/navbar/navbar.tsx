@@ -57,7 +57,7 @@ const switchTheme = (e: any) => {
 if(path.type === "link" ) {
   return (
     <li className="nav-item" key={index}>
-      <a className={`nav-link ${window.location.pathname === path.url ? "active" : ""}`} href={path.url}>
+      <a className={`nav-link ${window.location.hash.slice(1) === path.url ? "active" : ""}`} href={"#"+path.url}>
       {path.name}
       </a>
     </li>

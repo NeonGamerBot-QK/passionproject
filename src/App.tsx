@@ -75,7 +75,7 @@ const querys = new URLSearchParams(window.location.search);
 </div>
 
     
-</div> : <MainApp /> ? window.location.hash == "#/timeline" ? <Timeline /> : <MainApp /> : <MainApp />}
+</div> : <MainApp /> ? window.location.hash === "#/timeline" ? <Timeline /> : <MainApp /> : <MainApp />}
     </div>
   );
 }

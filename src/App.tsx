@@ -45,7 +45,7 @@ const querys = new URLSearchParams(window.location.search);
           Learn React
         </a>
       </header> */}
-{querys.get("q") ? <Search query={querys.get("q")}/> : window.location.hash = "#/flipgrids" ? 
+{querys.get("q") ? <Search query={querys.get("q")}/> : window.location.hash === "#/flipgrids" ? 
 <div style={{ height: "100vh"}}> 
 <h1>This is the flipgrids app </h1>
 <div id="flipgrids" className="flipgrids" style={{ display: "flex" }}>

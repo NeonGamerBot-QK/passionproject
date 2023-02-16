@@ -10,13 +10,13 @@
         },
         {
             "name": "Flipgrids",
-            "url": "/flipgrids",
+            "url": "#/flipgrids",
             "disabled": false,
             "type": "link"
         },
         {
             "name": "Timeline",
-            "url": "/timeline",
+            "url": "#/timeline",
             "disabled": false,
             "type": "link"
         }

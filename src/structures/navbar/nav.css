@@ -13,8 +13,6 @@ input#un-mute {
   
   input#un-mute:checked ~ .unmute img {
     display: initial;
-
-
   }
   
   input#un-mute:checked ~ .mute img {

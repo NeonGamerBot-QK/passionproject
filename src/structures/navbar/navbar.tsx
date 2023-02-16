@@ -57,7 +57,7 @@ const switchTheme = (e: any) => {
 if(path.type === "link" ) {
   return (
     <li className="nav-item" key={index}>
-      <a className={`nav-link ${window.location.hash== path.url ? "active" : ""}`} href={path.url} target="_blank">
+      <a className={`nav-link ${window.location.hash === path.url ? "active" : ""}`} href={path.url} rel="noreferrer" target="_blank">
       {path.name}
       </a>
     </li>
